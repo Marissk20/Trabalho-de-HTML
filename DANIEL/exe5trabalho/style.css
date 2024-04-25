@@ -1,0 +1,47 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: burlywood;
+}
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    
+    background-color: rgb(246, 175, 125);
+    width: 50%;
+    margin:170px auto auto auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #00ff0d;
+  }
