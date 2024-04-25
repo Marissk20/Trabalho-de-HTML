@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento de Produto</title>
+    <style>
+        @keyframes countdown {
+            from {
+                color: red;
+            }
+            to {
+                color: black;
+            }
+        }
+
+        .countdown {
+            font-size: 24px;
+            animation: countdown 1s linear infinite alternate;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lançamento do Novo Produto!</h1>
+    
+    <div>
+        <h2>Data de Lançamento:</h2>
+        <p class="countdown" id="countdown"></p>
+    </div>
+    
+    <div>
+        <h2>Imagem do Produto:</h2>
+        <ul>
+            <li>Monitor AOC</li>
+        </ul>
+        <img src="monitor.jpeg" alt="Produto">
+    </div>
+    
+    <div>
+        <h2>características:</h2>
+        <ul>
+            <li>ful hd</li>
+            <li>244hz</li>
+            <li>27 Polegadas</li>
+        </ul>
+    </div>
+    
+    <div>
+        <h2>Regras de compra:</h2>
+        <UL>
+            <LI>Apenas um por cpf</LI>
+        </UL>
+    </div>
+
+    <script>
+        var launchDate = new Date('2024-04-01').getTime();
+
+        var countdown = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = launchDate - now;
+            
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+
+            document.getElementById('countdown').innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+            
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = "LANÇADO!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

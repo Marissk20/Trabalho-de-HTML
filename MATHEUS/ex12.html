@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gallery figure {
+            margin: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 200px; 
+            height: 200px; 
+        }
+
+        .gallery figure:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <figure>
+            <img src="java.jpg" alt="Foto 1">
+            <figcaption>Foto 1</figcaption>
+        </figure>
+        <figure>
+            <img src="javascipt.png" alt="Foto 2">
+            <figcaption>Foto 2</figcaption>
+        </figure>
+       
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const figures = document.querySelectorAll('.gallery figure');
+
+            figures.forEach(function (figure) {
+                figure.addEventListener('click', function () {
+                    const imgSrc = figure.querySelector('img').src;
+                    showFullScreen(imgSrc);
+                });
+            });
+
+            function showFullScreen(imgSrc) {
+                const fullscreenDiv = document.createElement('div');
+                fullscreenDiv.classList.add('fullscreen');
+
+                const img = document.createElement('img');
+                img.src = imgSrc;
+
+                fullscreenDiv.appendChild(img);
+                document.body.appendChild(fullscreenDiv);
+
+                fullscreenDiv.addEventListener('click', function () {
+                    document.body.removeChild(fullscreenDiv);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
