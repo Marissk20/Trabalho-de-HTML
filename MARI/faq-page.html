@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perguntas Frequentes</title>
+	<style>
+		body {
+			background-color: #363636;
+		}
+
+		header {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 5em;
+		}
+
+		header .title {
+			width: 400px;
+			line-height: 0;
+		}
+
+		header .title h1 {
+			text-align: center;
+			font-family: 'Arial', sans-serif;
+			color: #ccc;
+		}
+
+		header .title .underline {
+			width: 100%;
+			height: 5px;
+			background-color: #ccc;
+			border-radius: 5px;
+		}
+
+		summary::-webkit-details-marker {
+			display: none;
+		}
+
+		details {
+			margin-bottom: 15px;
+			border-radius: 8px;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+			font-family: Arial, sans-serif;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+		}
+
+		summary {
+			background-color: #e6e6e6;
+			padding: 15px;
+			cursor: pointer;
+			user-select: none;
+			font-weight: bold;
+			transition: background-color 0.3s ease;
+		}
+
+		details[open] summary {
+			background-color: #d3d3d3;
+		}
+
+		details[open] p {
+			padding: 15px;
+		}
+
+		summary:hover {
+			background-color: #ccc;
+		}
+
+		details {
+			transition: all 0.3s ease;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<div class="title">
+			<h1>Perguntas Frequentes</h1>
+			<div class="underline"></div>
+		</div>
+	</header>
+
+	<details>
+		<summary>O que é HTML?</summary>
+		<p>HTML (HyperText Markup Language) é a linguagem padrão para criar e projetar páginas da web. Ele define a
+			estrutura e o layout do conteúdo da página usando tags e atributos.</p>
+	</details>
+
+	<details>
+		<summary>O que é CSS?</summary>
+		<p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para controlar a apresentação visual de uma
+			página da web. Ele permite definir cores, fontes, layouts e outros aspectos visuais de elementos HTML.</p>
+	</details>
+
+	<details>
+		<summary>O que é JavaScript?</summary>
+		<p>JavaScript é uma linguagem de programação utilizada para tornar as páginas da web interativas e dinâmicas.
+			Ele pode ser usado para manipular o conteúdo da página, responder a eventos do usuário e muito mais.</p>
+	</details>
+
+</body>
+
+</html>
