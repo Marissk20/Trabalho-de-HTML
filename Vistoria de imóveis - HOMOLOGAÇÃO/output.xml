@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-15T12:11:26.110205" rpa="false" schemaversion="5">
+<suite id="s1" name="Vistoriaa" source="C:\Users\mariana.paula\Documents\AUTOMAÇÕES PARA O DIA A DIA\Vistoria de imóveis - HOMOLOGAÇÃO\vistoriaa.robot">
+<test id="s1-t1" name="Abrindo o navegador" line="26">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:26.764597" level="INFO">Opening browser 'Chrome' to base url 'http://sig.teste.leiloesjudiciaisbrasil.com.br/index/leiloes'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-15T12:11:26.761604" elapsed="5.269875"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:32.034458" level="INFO">Typing text 'mariana.paula@leiloesjudiciais.com.br' into text field 'name=email'.</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:32.033461" elapsed="0.082768"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:32.119221" level="INFO">Typing password into text field 'name=senha'.</msg>
+<msg time="2024-05-15T12:11:32.145152" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LOGIN_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:32.117226" elapsed="0.060307"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:32.180712" level="INFO">Clicking button 'name=submit'.</msg>
+<arg>${LOGAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:32.178531" elapsed="8.131117"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:40.310646" level="INFO">Opening url 'http://sig.teste.leiloesjudiciaisbrasil.com.br/vistoria/imoveis-formulario'</msg>
+<arg>${LINK_FORMULARIO}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-15T12:11:40.310646" elapsed="3.745352"/>
+</kw>
+<status status="PASS" start="2024-05-15T12:11:26.756331" elapsed="17.300628"/>
+</test>
+<test id="s1-t2" name="Cadastrar vistoria do imóvel" line="33">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.063940" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.062942" elapsed="0.043977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.108911" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.107914" elapsed="0.042968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.151879" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.150882" elapsed="0.042562"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.195439" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.194442" elapsed="0.254851"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.451288" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.450290" elapsed="0.034003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.486287" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.485291" elapsed="0.040750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.527038" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.526041" elapsed="0.050759"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.578823" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.577797" elapsed="0.032023"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.611816" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.610818" elapsed="0.034216"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:44.647028" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.645034" elapsed="0.067256"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:11:49.714571" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:11:44.712290" elapsed="5.004275"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:49.720950" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:11:49.719962" elapsed="0.056427"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:49.778377" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:49.777380" elapsed="3.634599"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:53.413974" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:53.411979" elapsed="3.243364"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-05-15T12:11:44.062942" elapsed="12.592401"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:56.658333" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:56.657336" elapsed="0.038003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:56.697333" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:56.696335" elapsed="0.030918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:56.729248" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:56.728251" elapsed="0.031914"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:56.762160" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:56.761163" elapsed="0.235201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:56.998359" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:56.997361" elapsed="0.028924"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:57.028279" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.026285" elapsed="0.040891"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:57.069171" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.068173" elapsed="0.031916"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:57.102083" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.101086" elapsed="0.032913"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:57.135993" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.134995" elapsed="0.030975"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:11:57.167965" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.166968" elapsed="0.048870"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:12:02.217083" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:11:57.215838" elapsed="5.001245"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:02.219288" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:02.218082" elapsed="0.054849"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:02.273924" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:02.272931" elapsed="4.181645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:06.455573" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:06.454576" elapsed="3.236258"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-05-15T12:11:56.656339" elapsed="13.035491"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:09.696816" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:09.694822" elapsed="0.042898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:09.739703" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:09.738713" elapsed="0.034380"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:09.775087" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:09.774091" elapsed="0.034906"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:09.810991" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:09.809994" elapsed="0.225291"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.037279" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.036282" elapsed="0.026928"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.065204" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.064207" elapsed="0.041889"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.108090" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.107093" elapsed="0.030918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.140006" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.139009" elapsed="0.033909"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.174912" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.173916" elapsed="0.033356"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:10.209265" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.208268" elapsed="0.051862"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:12:15.262240" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:12:10.261129" elapsed="5.003162"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:15.268252" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:15.267244" elapsed="0.051256"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:15.319695" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:15.319595" elapsed="3.716660"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:19.038243" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:19.037247" elapsed="3.079013"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-05-15T12:12:09.693834" elapsed="12.423423"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.119251" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.118253" elapsed="0.039339"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.159587" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.158589" elapsed="0.029926"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.190510" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.189512" elapsed="0.038899"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.230404" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.229407" elapsed="0.225212"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.456612" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.454619" elapsed="0.029683"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.485300" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.484302" elapsed="0.040543"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.526840" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.525842" elapsed="0.031706"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.558545" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.557548" elapsed="0.034907"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.594449" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.593452" elapsed="0.030918"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:22.626364" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.625367" elapsed="0.049213"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:12:27.676137" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:12:22.675579" elapsed="5.002560"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:27.684449" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:27.680459" elapsed="0.054025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:27.736468" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:27.735472" elapsed="4.275400"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:32.012866" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:32.011869" elapsed="3.693732"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-05-15T12:12:22.118253" elapsed="13.588345"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:35.708593" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:35.707595" elapsed="0.036707"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:35.746296" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:35.745299" elapsed="0.028923"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:35.776216" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:35.774222" elapsed="0.031916"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:35.808132" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:35.807135" elapsed="0.237604"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.046705" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.045708" elapsed="0.026575"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.074277" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.072283" elapsed="0.040670"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.114947" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.113950" elapsed="0.030917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.146861" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.145866" elapsed="0.034037"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.181897" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.180900" elapsed="0.030060"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:36.211955" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.210960" elapsed="0.046875"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:12:41.259994" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:12:36.258804" elapsed="5.001190"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:41.261988" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:41.260991" elapsed="0.054391"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:41.317369" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:41.316371" elapsed="4.751121"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:46.069490" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:46.067492" elapsed="3.565027"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-05-15T12:12:35.707595" elapsed="13.925919"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:49.637503" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.635508" elapsed="0.040025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:49.676529" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.675533" elapsed="0.030446"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:49.707974" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.706978" elapsed="0.030803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:49.740772" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.738809" elapsed="0.231766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:49.972569" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.971572" elapsed="0.027087"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:50.000654" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:49.999656" elapsed="0.043884"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:50.044537" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:50.043540" elapsed="0.031915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:50.076453" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:50.075455" elapsed="0.035904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:50.113353" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:50.112356" elapsed="0.029921"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:50.144271" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:50.143275" elapsed="0.046874"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:12:55.192277" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:12:50.191146" elapsed="5.001131"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:55.196306" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:12:55.194305" elapsed="0.052721"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:55.249019" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:55.248022" elapsed="3.751286"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:12:59.001302" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:12:59.000307" elapsed="3.484300"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-05-15T12:12:49.634511" elapsed="12.851107"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.488593" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.487596" elapsed="0.036995"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.526585" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.525588" elapsed="0.033909"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.560494" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.559497" elapsed="0.035053"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.596544" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.595547" elapsed="0.236034"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.833576" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.832578" elapsed="0.033913"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.869482" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.867510" elapsed="0.053837"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.923337" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.922340" elapsed="0.036902"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.961240" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.960240" elapsed="0.032912"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:02.995146" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:02.994149" elapsed="0.033913"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:03.030053" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:03.029056" elapsed="0.055930"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:13:08.087046" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:13:03.084986" elapsed="5.002060"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:08.089043" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:08.088046" elapsed="0.060286"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:08.150451" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:08.149328" elapsed="3.868362"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:12.020682" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:12.018688" elapsed="3.071867"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-05-15T12:13:02.487596" elapsed="12.602959"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.093548" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.092551" elapsed="0.036395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.130941" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.129943" elapsed="0.029920"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.160860" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.159863" elapsed="0.031915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.193772" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.192775" elapsed="0.244612"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.439383" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.438385" elapsed="0.029005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.469385" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.467390" elapsed="0.039904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.508291" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.507294" elapsed="0.034558"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.542848" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.541852" elapsed="0.033674"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.576522" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.575526" elapsed="0.030917"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:15.608437" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.607440" elapsed="0.047873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:13:20.656385" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:13:15.656310" elapsed="5.001104"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:20.661704" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:20.658421" elapsed="0.053791"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:20.714218" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:20.713209" elapsed="3.759945"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:24.476147" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:24.474152" elapsed="3.353588"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2024-05-15T12:13:15.091554" elapsed="12.736186"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:27.830865" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:27.829705" elapsed="0.044047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:27.874749" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:27.873752" elapsed="0.040124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:27.914867" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:27.913876" elapsed="0.031915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:27.947779" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:27.946782" elapsed="0.290299"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.239103" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.238083" elapsed="0.028720"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.268798" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.267801" elapsed="0.044110"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.313906" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.312909" elapsed="0.028924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.343826" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.342829" elapsed="0.031045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.374890" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.373874" elapsed="0.029334"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:28.405202" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.404205" elapsed="0.047587"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:13:33.454209" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:13:28.452815" elapsed="5.003396"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:33.460324" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:33.459203" elapsed="0.049138"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:33.510481" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:33.509338" elapsed="3.956402"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:37.467733" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:37.466741" elapsed="3.473277"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2024-05-15T12:13:27.828707" elapsed="13.112309"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:40.944008" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:40.943011" elapsed="0.035501"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:40.979512" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:40.978512" elapsed="0.029921"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.010425" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.009428" elapsed="0.031921"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.043338" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.042341" elapsed="0.295349"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.339685" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.338687" elapsed="0.028576"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.369259" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.368262" elapsed="0.043084"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.413339" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.412342" elapsed="0.030713"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.445049" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.444052" elapsed="0.028923"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.474969" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.473972" elapsed="0.028459"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:41.504426" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.503429" elapsed="0.048742"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:13:46.553580" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:13:41.552171" elapsed="5.001409"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:46.555574" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:46.554577" elapsed="0.054407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:46.611055" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:46.609983" elapsed="3.952602"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:50.564579" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:50.563581" elapsed="3.175809"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2024-05-15T12:13:40.942014" elapsed="12.798368"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:53.743374" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:53.742377" elapsed="0.036094"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:53.780466" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:53.779470" elapsed="0.029920"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:53.810386" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:53.810386" elapsed="0.031915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:53.844296" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:53.843301" elapsed="0.226421"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.072714" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.070719" elapsed="0.041890"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.114603" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.113607" elapsed="0.039992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.155594" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.154597" elapsed="0.030060"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.186652" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.185655" elapsed="0.033239"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.220864" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.219894" elapsed="0.031167"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:54.253055" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.252058" elapsed="0.046767"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:13:59.301100" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:13:54.299857" elapsed="5.003236"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:59.310348" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:13:59.306085" elapsed="0.068388"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:13:59.376466" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:13:59.375469" elapsed="3.855479"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:03.232936" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:03.230948" elapsed="3.311501"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2024-05-15T12:13:53.741380" elapsed="12.802069"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.546463" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.545466" elapsed="0.039868"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.586332" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.585334" elapsed="0.028659"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.615988" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.614991" elapsed="0.032940"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.649897" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.648928" elapsed="0.229592"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.880511" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.879514" elapsed="0.029373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.910880" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.908887" elapsed="0.039893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.950775" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.949777" elapsed="0.032145"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:06.983916" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:06.982919" elapsed="0.039896"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:07.024808" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:07.023810" elapsed="0.036714"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:07.062518" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:07.061520" elapsed="0.086873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:14:12.149558" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:14:07.149388" elapsed="5.000170"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:12.151554" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:12.150557" elapsed="0.050283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:12.202837" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:12.201838" elapsed="3.919175"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:16.123007" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:16.122014" elapsed="3.359525"/>
+</kw>
+<var name="${i}">11</var>
+<status status="PASS" start="2024-05-15T12:14:06.544443" elapsed="12.937096"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.484529" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.483532" elapsed="0.037027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.521556" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.520559" elapsed="0.030917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.552473" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.551476" elapsed="0.034172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.586644" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.585648" elapsed="0.249924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.836570" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.835572" elapsed="0.030119"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.867685" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.866687" elapsed="0.039771"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.908453" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.907455" elapsed="0.034089"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.943572" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.942571" elapsed="0.031887"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:19.975455" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:19.974458" elapsed="0.030918"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:20.006373" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:20.005376" elapsed="0.049967"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:14:25.057112" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:14:20.056340" elapsed="5.001764"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:25.063468" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:25.061480" elapsed="0.050212"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:25.114683" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:25.113686" elapsed="3.698570"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:28.814249" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:28.813251" elapsed="3.336245"/>
+</kw>
+<var name="${i}">12</var>
+<status status="PASS" start="2024-05-15T12:14:19.482536" elapsed="12.666960"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.152486" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.151489" elapsed="0.036131"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.189614" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.188617" elapsed="0.029133"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.219744" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.218747" elapsed="0.033087"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.252831" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.251834" elapsed="0.301070"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.554899" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.553902" elapsed="0.029135"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.585031" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.584034" elapsed="0.045427"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.631483" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.630487" elapsed="0.031894"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.664368" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.662381" elapsed="0.028614"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.692990" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.691992" elapsed="0.028924"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:32.722910" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.721913" elapsed="0.048157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:14:37.771208" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:14:32.771067" elapsed="5.000141"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:37.773233" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:37.772233" elapsed="0.050127"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:37.825351" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:37.823359" elapsed="3.822001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:41.647384" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:41.646359" elapsed="3.355521"/>
+</kw>
+<var name="${i}">13</var>
+<status status="PASS" start="2024-05-15T12:14:32.150492" elapsed="12.851388"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.003875" level="INFO">Clicking element 'id=comitente_id_chzn'.</msg>
+<arg>${SELECT_ COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.003875" elapsed="0.037898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.042770" level="INFO">Clicking element 'id=comitente_id_chzn_o_1'.</msg>
+<arg>${OPÇÃO_COMITENTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.041773" elapsed="0.029920"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.073691" level="INFO">Clicking element 'class=buttonS.bBlue'.</msg>
+<arg>${GERAR_NUMERO_AUTOMATICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.072696" elapsed="0.031395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.107085" level="INFO">Clicking element 'css=[title='Show Source']'.</msg>
+<arg>${ABRIR_CAMPO_DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.105118" elapsed="0.337864"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.444977" level="INFO">Clicking element 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.443977" elapsed="0.030918"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.476889" level="INFO">Typing text 'teste teste teste teste' into text field 'name=nm_descricao'.</msg>
+<arg>${DESCRIÇÃO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.475892" elapsed="0.037899"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.515785" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.514788" elapsed="0.031120"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.547896" level="INFO">Clicking element 'id=parent_id_chzn'.</msg>
+<arg>${SELECT_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.546897" elapsed="0.030437"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.578331" level="INFO">Clicking element 'id=parent_id_chzn_o_25'.</msg>
+<arg>${OPÇÃO_CATEGORIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.577334" elapsed="0.029921"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:45.609249" level="INFO">Selecting options from selection list 'id=nm_estado' by label DF.</msg>
+<arg>${BOTÃO_ESTADO}</arg>
+<arg>DF</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.608252" elapsed="0.046569"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T12:14:50.656384" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T12:14:45.655818" elapsed="5.002557"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:50.661490" level="INFO">Selecting options from selection list 'id=nm_cidade' by label Brasília.</msg>
+<arg>${BOTÃO_CIDADE}</arg>
+<arg>Brasília</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-15T12:14:50.660363" elapsed="0.053064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:50.714385" level="INFO">Clicking element 'class=buttonS.bGreen'.</msg>
+<arg>${BOTÃO_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:50.713427" elapsed="3.705551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T12:14:54.420971" level="INFO">Clicking element 'class=buttonS.floatR.bBlue'.</msg>
+<arg>${BOTÃO_NOVO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T12:14:54.419974" elapsed="3.341860"/>
+</kw>
+<var name="${i}">14</var>
+<status status="PASS" start="2024-05-15T12:14:45.002878" elapsed="12.759956"/>
+</iter>
+<var>${i}</var>
+<value>15</value>
+<status status="PASS" start="2024-05-15T12:11:44.060948" elapsed="193.701886"/>
+</for>
+<status status="PASS" start="2024-05-15T12:11:44.058954" elapsed="193.705874"/>
+</test>
+<test id="s1-t3" name="Finalizar teste" line="51">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-15T12:14:57.767819" elapsed="2.158618"/>
+</kw>
+<status status="PASS" start="2024-05-15T12:14:57.765825" elapsed="2.162553"/>
+</test>
+<status status="PASS" start="2024-05-15T12:11:26.117187" elapsed="213.814333"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Vistoriaa">Vistoriaa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

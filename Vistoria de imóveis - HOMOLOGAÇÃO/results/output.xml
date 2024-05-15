@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-21T17:19:29.896787" rpa="false" schemaversion="5">
+<suite id="s1" name="Vistoria de imóveis" source="C:\Users\mariana.paula\Documents\AUTOMAÇÕES PARA O DIA A DIA\Vistoria de imóveis">
+<suite id="s1-s1" name="Vistoria" source="C:\Users\mariana.paula\Documents\AUTOMAÇÕES PARA O DIA A DIA\Vistoria de imóveis\vistoria.robot">
+<test id="s1-s1-t1" name="Abrindo o navegador" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T17:19:30.098079" level="INFO">Opening browser 'Chrome' to base url 'http://sig.teste.leiloesjudiciaisbrasil.com.br/index/leiloes'.</msg>
+<arg>http://sig.teste.leiloesjudiciaisbrasil.com.br/index/leiloes</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T17:19:30.097083" elapsed="5.608757"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T17:19:35.707830" level="INFO">Typing text 'mariana.paula@leiloesjudiciais.com.br' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>mariana.paula@leiloesjudiciais.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T17:19:35.706833" elapsed="0.102972"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-21T17:19:35.810801" level="INFO">Typing password into text field 'name=senha'.</msg>
+<msg time="2024-03-21T17:19:35.847134" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name=senha</arg>
+<arg>PSilva</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T17:19:35.810801" elapsed="0.078112"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-21T17:19:35.891915" level="INFO">Clicking button 'name=submit'.</msg>
+<arg>name=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T17:19:35.889915" elapsed="5.248456"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-21T17:19:41.139369" level="INFO">Opening url 'http://sig.teste.leiloesjudiciaisbrasil.com.br/vistoria/imoveis-formulario'</msg>
+<arg>http://sig.teste.leiloesjudiciaisbrasil.com.br/vistoria/imoveis-formulario</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-21T17:19:41.139369" elapsed="4.024294"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T17:19:50.165091" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T17:19:45.164660" elapsed="5.001429"/>
+</kw>
+<status status="PASS" start="2024-03-21T17:19:30.096085" elapsed="20.070460"/>
+</test>
+<status status="PASS" start="2024-03-21T17:19:29.930844" elapsed="20.236700"/>
+</suite>
+<status status="PASS" start="2024-03-21T17:19:29.900750" elapsed="20.267791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Vistoria de imóveis">Vistoria de imóveis</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Vistoria">Vistoria de imóveis.Vistoria</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
